@@ -12,5 +12,5 @@ Various techniques used include implementing JLibrary components, using Interfac
 > You will be given various different decisions as you progress through the game that may alter your future outcomes!
 > As the stages progress, the character's statistics will decrease after each stage by a random amount, or based on the decisions that you make.
 > The goal is to get through all of the stages successfully without your statistics reaching 0.
-***
+
 
