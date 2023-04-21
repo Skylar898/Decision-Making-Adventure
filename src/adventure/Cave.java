@@ -8,22 +8,18 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 
 public class Cave {
+	private updateStatistics update;
 
 	private JFrame caveFrame = new JFrame();
+
 	private Timer timer = new Timer();
-	private End end;
+	private TimerTask timerTask;
 
 	private JLabel airBalloonBackground = new JLabel();
-	private ImageIcon balloon = new ImageIcon(getClass().getResource("/images/cave_exit_background.jpg"));
-
-	private JLabel lookoutBackground = new JLabel();
-	private ImageIcon lookout = new ImageIcon(getClass().getResource("/images/cave_exit_lookout_background.jpg"));
-
-	private TimerTask timerTask;
 	private JLabel campfireBackground = new JLabel();
-	private ImageIcon campfire = new ImageIcon(getClass().getResource("/images/cave_campfire_background.jpg"));
+	private JLabel lookoutBackground = new JLabel();
 
-	private updateStatistics update;
+	private ImageIcon lookout = new ImageIcon(getClass().getResource("/images/cave_exit_lookout_background.jpg"));
 
 	public Cave(updateStatistics update) {
 		this.update = update;
@@ -39,6 +35,8 @@ public class Cave {
 	}
 
 	protected void nextLevel(String choice) {
+		End end = new End(update);
+
 		timerTask = new TimerTask() {
 
 			@Override
@@ -46,30 +44,33 @@ public class Cave {
 				caveFrame.dispose();
 
 				switch (choice) {
-
 				case "Berry":
 					end.berryEnd();
+					break;
 
 				case "Walk":
 					end.walkEnd();
+					break;
 
 				case "Fight":
 					end.fightEnd();
+					break;
 
 				case "Run":
 					end.runEnd();
+					break;
 
+				default:
+					break;
 				}
-
-				timer.schedule(timerTask, 2000);
-
 			}
-
 		};
+
+		timer.schedule(timerTask, 2000);
 	}
 
 	protected void berryOption() {
-		end = new End(update);
+		ImageIcon balloon = new ImageIcon(getClass().getResource("/images/cave_exit_background.jpg"));
 		airBalloonBackground.setIcon(balloon);
 
 		caveFrame.add(airBalloonBackground);
@@ -78,32 +79,27 @@ public class Cave {
 	}
 
 	protected void walkOption() {
-		end = new End(update);
 		lookoutBackground.setIcon(lookout);
 
 		caveFrame.add(lookoutBackground);
 		makeFrame();
 		nextLevel("Walk");
-
 	}
 
 	protected void fightOption() {
-		end = new End(update);
+		ImageIcon campfire = new ImageIcon(getClass().getResource("/images/cave_campfire_background.jpg"));
 		campfireBackground.setIcon(campfire);
 
 		caveFrame.add(campfireBackground);
 		makeFrame();
 		nextLevel("Fight");
-
 	}
 
 	protected void runOption() {
-		end = new End(update);
 		lookoutBackground.setIcon(lookout);
 
 		caveFrame.add(lookoutBackground);
 		makeFrame();
 		nextLevel("Run");
-
 	}
 }

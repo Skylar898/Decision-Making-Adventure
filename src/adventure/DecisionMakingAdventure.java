@@ -6,12 +6,6 @@ public class DecisionMakingAdventure {
 		updateStatistics update = new updateStatistics();
 		Start window = new Start(update);
 
-		
 		window.startClass();
-	
 	}
-	
-
 }
-
-
