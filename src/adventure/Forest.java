@@ -22,15 +22,13 @@ public class Forest implements ActionListener{
 	private JLabel hikerLabel = new JLabel();
 	private ImageIcon hiker = new ImageIcon(getClass().getResource("/images/hiker.png"));
 	
-	//Go around option
 	private JButton fightButton;
 	private JButton runAwayButton;
 	
-	//Cross river option
 	private JButton berryButton;
 	private JButton walkButton;
 	
-	updateStatistics update;
+	private updateStatistics update;
 	
 	public Forest(updateStatistics update) {
 		this.update = update;
