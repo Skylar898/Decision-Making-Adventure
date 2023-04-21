@@ -25,7 +25,7 @@ public class Cave {
 		this.update = update;
 	}
 
-	protected void makeFrame() {
+	private void makeFrame() {
 		caveFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		caveFrame.setResizable(false);
 		caveFrame.setTitle("Cave");
@@ -34,7 +34,7 @@ public class Cave {
 		caveFrame.setLocationRelativeTo(null);
 	}
 
-	protected void nextLevel(String choice) {
+	private void nextLevel(String choice) {
 		End end = new End(update);
 
 		timerTask = new TimerTask() {

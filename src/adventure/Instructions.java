@@ -22,8 +22,6 @@ public class Instructions {
 		+ "Good luck!<html>";
 		
 		window.Instructions(printInstructions);
-
-	
 	}
 }
 
