@@ -1,3 +1,4 @@
+package adventure;
 
 public interface Statistics {
 	public static final int HEALTH = 10;

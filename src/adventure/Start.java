@@ -1,3 +1,4 @@
+package adventure;
 
 import java.awt.Color;
 import java.awt.Font;
@@ -31,7 +32,7 @@ public class Start implements ActionListener {
 		instructionsButton = new JButton("Instructions");
 		startButton = new JButton("Start");
 		
-		ImageIcon signpost = new ImageIcon("signpost.png");
+		ImageIcon signpost = new ImageIcon(getClass().getResource("/images/signpost.png"));
 		startBackground.setIcon(signpost);
 
 		

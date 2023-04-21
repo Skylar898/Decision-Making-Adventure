@@ -1,3 +1,5 @@
+package adventure;
+
 import java.awt.Color;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
@@ -20,7 +22,7 @@ public class River implements ActionListener{
 	private updateStatistics update;
 	
 	private JLabel hikerLabel = new JLabel();
-	private ImageIcon hiker = new ImageIcon("hiker.png");
+	private ImageIcon hiker = new ImageIcon(getClass().getResource("/images/hiker.png"));
 
 	
 	public River(updateStatistics update) {
@@ -37,7 +39,7 @@ public class River implements ActionListener{
 		
 		hikerLabel.setBounds(100, 200, 119, 200);
 		
-		ImageIcon river = new ImageIcon("river_background.jpg");
+		ImageIcon river = new ImageIcon(getClass().getResource("/images/river_background.jpg"));
 		riverBackground.setIcon(river);
 		
 		goAroundButton.setFocusable(false);

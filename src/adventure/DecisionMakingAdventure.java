@@ -1,3 +1,4 @@
+package adventure;
 
 public class DecisionMakingAdventure {
 

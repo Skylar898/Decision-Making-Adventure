@@ -1,3 +1,4 @@
+package adventure;
 
 public class Instructions {
 	protected void printInstructions(Start window) {

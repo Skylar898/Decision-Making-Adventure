@@ -1,3 +1,5 @@
+package adventure;
+
 import java.awt.Color;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
@@ -15,10 +17,10 @@ public class Forest implements ActionListener{
 	private JPanel blackPanel = new JPanel();
 	private JFrame forestFrame = new JFrame();
 	private JLabel forestBackground = new JLabel();
-	private ImageIcon forest = new ImageIcon("forest_background.jpg");
+	private ImageIcon forest = new ImageIcon(getClass().getResource("/images/forest_background.jpg"));
 	
 	private JLabel hikerLabel = new JLabel();
-	private ImageIcon hiker = new ImageIcon("hiker.png");
+	private ImageIcon hiker = new ImageIcon(getClass().getResource("/images/hiker.png"));
 	
 	//Go around option
 	private JButton fightButton;
@@ -39,7 +41,7 @@ public class Forest implements ActionListener{
 		runAwayButton = new JButton("Run Away");
 		
 		JLabel wolfLabel = new JLabel();
-		ImageIcon wolf = new ImageIcon("wolf.png");
+		ImageIcon wolf = new ImageIcon(getClass().getResource("/images/wolf.png"));
 		wolfLabel.setIcon(wolf);
 		wolfLabel.setBounds(550, 250, 101, 113);
 		
@@ -83,7 +85,7 @@ public class Forest implements ActionListener{
 		berryButton = new JButton("Eat Berries");
 		walkButton = new JButton("Keep Walking");
 		JLabel berryLabel = new JLabel();
-		ImageIcon berryBush = new ImageIcon("berry_bush.png");
+		ImageIcon berryBush = new ImageIcon(getClass().getResource("/images/berry_bush.png"));
 		berryLabel.setIcon(berryBush);
 		berryLabel.setBounds(450, 290, 100, 60);
 		

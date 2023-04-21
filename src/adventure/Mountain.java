@@ -1,3 +1,5 @@
+package adventure;
+
 import java.awt.Color;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
@@ -15,11 +17,11 @@ public class Mountain implements ActionListener {
 	
 	private JFrame mountainFrame = new JFrame();
 	private JLabel mountainBackground = new JLabel();
-	private ImageIcon mountain = new ImageIcon("mountain_background.jpg");
+	private ImageIcon mountain = new ImageIcon(getClass().getResource("/images/mountain_background.jpg"));
 	private JPanel blackPanel = new JPanel();
 	
 	private JLabel hikerLabel = new JLabel();
-	private ImageIcon hiker = new ImageIcon("hiker.png");
+	private ImageIcon hiker = new ImageIcon(getClass().getResource("/images/hiker.png"));
 	
 	private JButton berryCaveButton;
 	private JButton walkCaveButton;

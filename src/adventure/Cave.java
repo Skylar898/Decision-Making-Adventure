@@ -1,3 +1,5 @@
+package adventure;
+
 import java.util.Timer;
 import java.util.TimerTask;
 
@@ -12,15 +14,15 @@ public class Cave {
 	private End end;
 	
 	private JLabel airBalloonBackground = new JLabel();
-	private ImageIcon balloon = new ImageIcon("cave_exit_background.jpg");
+	private ImageIcon balloon = new ImageIcon(getClass().getResource("/images/cave_exit_background.jpg"));
 	
 	
 	private JLabel lookoutBackground = new JLabel();
-	private ImageIcon lookout = new ImageIcon("cave_exit_lookout_background.jpg");
-	
+	private ImageIcon lookout = new ImageIcon(getClass().getResource("/images/cave_exit_lookout_background.jpg"));
+
 	
 	private JLabel campfireBackground = new JLabel();
-	private ImageIcon campfire = new ImageIcon("cave_campfire_background.jpg");
+	private ImageIcon campfire = new ImageIcon(getClass().getResource("/images/cave_campfire_background.jpg"));
 	
 	private updateStatistics update;
 	
