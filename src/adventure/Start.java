@@ -34,17 +34,19 @@ public class Start implements ActionListener {
 		startBackground.setIcon(signpost);
 
 		instructionsButton.setFont(new Font("Calibri Regular", Font.BOLD, 12));
+		instructionsButton.setFocusable(false);
 		instructionsButton.setBounds(250, 225, 120, 35);
 		instructionsButton.addActionListener(this);
 
 		startButton.setFont(new Font("Calibri Regular", Font.BOLD, 12));
+		startButton.setFocusable(false);
 		startButton.setBounds(450, 225, 120, 35);
 		startButton.addActionListener(this);
 
 		startFrame.add(startButton);
 		startFrame.add(instructionsButton);
 		startFrame.add(startBackground);
-		
+
 		startFrame.setTitle("Decision Making Adventure");
 		startFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		startFrame.setResizable(false);
@@ -65,6 +67,7 @@ public class Start implements ActionListener {
 		instructionsLabel.setFont(new Font("Calibri Regular", Font.PLAIN, 18));
 
 		backButton.setFont(new Font("Calibri Regular", Font.BOLD, 12));
+		backButton.setFocusable(false);
 		backButton.setBounds(230, 375, 75, 35);
 		backButton.addActionListener(this);
 
@@ -72,6 +75,7 @@ public class Start implements ActionListener {
 		instructionsFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		instructionsFrame.setResizable(false);
 		instructionsFrame.setSize(560, 500);
+		instructionsFrame.setLayout(null);
 		instructionsFrame.setVisible(true);
 		instructionsFrame.setLocationRelativeTo(null);
 		instructionsFrame.setBackground(Color.white);

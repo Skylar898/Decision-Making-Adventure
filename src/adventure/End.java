@@ -14,17 +14,30 @@ public class End implements ActionListener {
 
 	private JFrame endFrame = new JFrame();
 
-	private JButton restartButton;
-	private JButton exitButton;
+	private JButton restartButton = new JButton("Restart");
+	private JButton exitButton = new JButton("Exit");
 
 	public End(updateStatistics update) {
 		this.update = update;
 	}
 
+	private void makeFrame() {
+		restartButton.setFocusable(false);
+		exitButton.setFocusable(false);
+		
+		endFrame.setLayout(null);
+		endFrame.setResizable(false);
+		endFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		endFrame.setVisible(true);
+		endFrame.setLocationRelativeTo(null);
+		endFrame.setBackground(Color.white);
+
+		endFrame.add(restartButton);
+		endFrame.add(exitButton);
+	}
+
 	protected void berryEnd() {
 		JLabel berryEndLabel = new JLabel();
-		restartButton = new JButton("Restart");
-		exitButton = new JButton("Exit");
 
 		berryEndLabel.setText("<html>Congratulations! You have successfully made it through the <br/>"
 				+ "Decision Making Adventure, by Skylar Phanenhour. <br/><br/>"
@@ -49,33 +62,21 @@ public class End implements ActionListener {
 
 		restartButton.setFont(new Font("Calibri Regular", Font.BOLD, 12));
 		restartButton.setBounds(100, 525, 120, 35);
-		restartButton.setFocusable(false);
 		restartButton.addActionListener(this);
 
 		exitButton.setFont(new Font("Calibri Regular", Font.BOLD, 12));
 		exitButton.setBounds(300, 525, 120, 35);
-		exitButton.setFocusable(false);
 		exitButton.addActionListener(this);
 
 		endFrame.setTitle("'Air Balloon' Ending");
-		endFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		endFrame.setResizable(false);
 		endFrame.setSize(575, 650);
-		endFrame.setLayout(null);
-		endFrame.setVisible(true);
-		endFrame.setLocationRelativeTo(null);
-		endFrame.getContentPane().setBackground(Color.white);
+		makeFrame();
 
 		endFrame.add(berryEndLabel);
-		endFrame.add(restartButton);
-		endFrame.add(exitButton);
-
 	}
 
 	protected void walkEnd() {
 		JLabel lostEndLabel = new JLabel();
-		restartButton = new JButton("Restart");
-		exitButton = new JButton("Exit");
 
 		lostEndLabel.setText("<html>Congratulations! You have successfully made it through the <br/>"
 				+ "Decision Making Adventure, by Skylar Phanenhour. <br/><br/>"
@@ -100,32 +101,21 @@ public class End implements ActionListener {
 
 		restartButton.setFont(new Font("Calibri Regular", Font.BOLD, 12));
 		restartButton.setBounds(150, 470, 120, 35);
-		restartButton.setFocusable(false);
 		restartButton.addActionListener(this);
 
 		exitButton.setFont(new Font("Calibri Regular", Font.BOLD, 12));
 		exitButton.setBounds(400, 470, 120, 35);
-		exitButton.setFocusable(false);
 		exitButton.addActionListener(this);
 
 		endFrame.setTitle("'Lost' Ending");
-		endFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		endFrame.setResizable(false);
 		endFrame.setSize(700, 575);
-		endFrame.setLayout(null);
-		endFrame.setVisible(true);
-		endFrame.setLocationRelativeTo(null);
-		endFrame.getContentPane().setBackground(Color.white);
+		makeFrame();
 
 		endFrame.add(lostEndLabel);
-		endFrame.add(restartButton);
-		endFrame.add(exitButton);
 	}
 
 	protected void fightEnd() {
 		JLabel fightEndLabel = new JLabel();
-		restartButton = new JButton("Restart");
-		exitButton = new JButton("Exit");
 
 		fightEndLabel.setText("<html>Congratulations! You have successfully made it through the <br/>"
 				+ "Decision Making Adventure, by Skylar Phanenhour. <br/><br/>"
@@ -150,32 +140,21 @@ public class End implements ActionListener {
 
 		restartButton.setFont(new Font("Calibri Regular", Font.BOLD, 12));
 		restartButton.setBounds(150, 470, 120, 35);
-		restartButton.setFocusable(false);
 		restartButton.addActionListener(this);
 
 		exitButton.setFont(new Font("Calibri Regular", Font.BOLD, 12));
 		exitButton.setBounds(400, 470, 120, 35);
-		exitButton.setFocusable(false);
 		exitButton.addActionListener(this);
 
 		endFrame.setTitle("'Campfire' Ending");
-		endFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		endFrame.setResizable(false);
 		endFrame.setSize(700, 575);
-		endFrame.setLayout(null);
-		endFrame.setVisible(true);
-		endFrame.setLocationRelativeTo(null);
-		endFrame.getContentPane().setBackground(Color.white);
+		makeFrame();
 
 		endFrame.add(fightEndLabel);
-		endFrame.add(restartButton);
-		endFrame.add(exitButton);
 	}
 
 	protected void runEnd() {
 		JLabel lostEndLabel = new JLabel();
-		restartButton = new JButton("Restart");
-		exitButton = new JButton("Exit");
 
 		lostEndLabel.setText("<html>Congratulations! You have successfully made it through the <br/>"
 				+ "Decision Making Adventure, by Skylar Phanenhour. <br/><br/>"
@@ -200,34 +179,23 @@ public class End implements ActionListener {
 
 		restartButton.setFont(new Font("Calibri Regular", Font.BOLD, 12));
 		restartButton.setBounds(150, 470, 120, 35);
-		restartButton.setFocusable(false);
 		restartButton.addActionListener(this);
 
 		exitButton.setFont(new Font("Calibri Regular", Font.BOLD, 12));
 		exitButton.setBounds(400, 470, 120, 35);
-		exitButton.setFocusable(false);
 		exitButton.addActionListener(this);
 
 		endFrame.setTitle("'Lost' Ending");
-		endFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		endFrame.setResizable(false);
 		endFrame.setSize(700, 575);
-		endFrame.setLayout(null);
-		endFrame.setVisible(true);
-		endFrame.setLocationRelativeTo(null);
-		endFrame.getContentPane().setBackground(Color.white);
+		makeFrame();
 
 		endFrame.add(lostEndLabel);
-		endFrame.add(restartButton);
-		endFrame.add(exitButton);
 	}
 
 	protected void gameOver() {
 		update.overviewFrame.dispose();
 		JLabel gameOverLabel = new JLabel();
 		JLabel titleLabel = new JLabel();
-		restartButton = new JButton("Restart");
-		exitButton = new JButton("Exit");
 
 		titleLabel.setText("Game Over!");
 		titleLabel.setBounds(135, 10, 300, 100);
@@ -245,34 +213,25 @@ public class End implements ActionListener {
 
 		restartButton.setFont(new Font("Calibri Regular", Font.BOLD, 12));
 		restartButton.setBounds(85, 325, 120, 35);
-		restartButton.setFocusable(false);
 		restartButton.addActionListener(this);
 
 		exitButton.setFont(new Font("Calibri Regular", Font.BOLD, 12));
 		exitButton.setBounds(275, 325, 120, 35);
-		exitButton.setFocusable(false);
 		exitButton.addActionListener(this);
 
 		endFrame.setTitle("Game Over!");
-		endFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		endFrame.setResizable(false);
 		endFrame.setSize(500, 450);
-		endFrame.setLayout(null);
-		endFrame.setVisible(true);
-		endFrame.setLocationRelativeTo(null);
-		endFrame.getContentPane().setBackground(Color.white);
+		makeFrame();
 
 		endFrame.add(titleLabel);
 		endFrame.add(gameOverLabel);
-		endFrame.add(restartButton);
-		endFrame.add(exitButton);
 	}
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		if (e.getSource() == restartButton) {
 			endFrame.dispose();
-			DecisionMakingAdventure newGame = new DecisionMakingAdventure();
+			DecisionMakingAdventure.main(null);
 		}
 
 		else if (e.getSource() == exitButton) {

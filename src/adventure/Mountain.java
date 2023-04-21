@@ -21,10 +21,10 @@ public class Mountain implements ActionListener {
 
 	private JFrame mountainFrame = new JFrame();
 
-	private JButton berryCaveButton;
-	private JButton walkCaveButton;
-	private JButton fightCaveButton;
-	private JButton runCaveButton;
+	private JButton berryCaveButton = new JButton("Enter Cave");
+	private JButton walkCaveButton = new JButton("Enter Cave");
+	private JButton fightCaveButton = new JButton("Enter Cave");
+	private JButton runCaveButton = new JButton("Enter Cave");
 
 	public Mountain(updateStatistics update) {
 		this.update = update;
@@ -104,11 +104,10 @@ public class Mountain implements ActionListener {
 	}
 
 	protected void berryOption() {
-		berryCaveButton = new JButton("Enter Cave");
 
-		berryCaveButton.setFocusable(false);
 		berryCaveButton.setBounds(175, 50, 125, 35);
 		berryCaveButton.setFont(new Font("Calibri Regular", Font.BOLD, 12));
+		berryCaveButton.setFocusable(false);
 		berryCaveButton.addActionListener(this);
 
 		mountainFrame.add(berryCaveButton);
@@ -117,11 +116,10 @@ public class Mountain implements ActionListener {
 	}
 
 	protected void walkOption() {
-		walkCaveButton = new JButton("Enter Cave");
 
-		walkCaveButton.setFocusable(false);
 		walkCaveButton.setBounds(175, 50, 125, 35);
 		walkCaveButton.setFont(new Font("Calibri Regular", Font.BOLD, 12));
+		walkCaveButton.setFocusable(false);
 		walkCaveButton.addActionListener(this);
 
 		mountainFrame.add(walkCaveButton);
@@ -129,11 +127,10 @@ public class Mountain implements ActionListener {
 	}
 
 	protected void fightOption() {
-		fightCaveButton = new JButton("Enter Cave");
 
-		fightCaveButton.setFocusable(false);
 		fightCaveButton.setBounds(175, 50, 125, 35);
 		fightCaveButton.setFont(new Font("Calibri Regular", Font.BOLD, 12));
+		fightCaveButton.setFocusable(false);
 		fightCaveButton.addActionListener(this);
 
 		mountainFrame.add(fightCaveButton);
@@ -141,11 +138,10 @@ public class Mountain implements ActionListener {
 	}
 
 	protected void runOption() {
-		runCaveButton = new JButton("Enter Cave");
 
-		runCaveButton.setFocusable(false);
 		runCaveButton.setBounds(175, 50, 125, 35);
 		runCaveButton.setFont(new Font("Calibri Regular", Font.BOLD, 12));
+		runCaveButton.setFocusable(false);
 		runCaveButton.addActionListener(this);
 
 		mountainFrame.add(runCaveButton);

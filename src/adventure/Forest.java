@@ -18,13 +18,13 @@ public class Forest implements ActionListener {
 
 	private Timer timer = new Timer();
 	private TimerTask timerTask;
-	
+
 	private JFrame forestFrame = new JFrame();
 
-	private JButton fightButton;
-	private JButton runAwayButton;
-	private JButton berryButton;
-	private JButton walkButton;
+	private JButton fightButton = new JButton("Fight Wolf");
+	private JButton runAwayButton = new JButton("Run Away");
+	private JButton berryButton = new JButton("Eat Berries");
+	private JButton walkButton = new JButton("Keep Walking");
 
 	public Forest(updateStatistics update) {
 		this.update = update;
@@ -37,7 +37,7 @@ public class Forest implements ActionListener {
 		hikerLabel.setBounds(225, 225, 119, 200);
 
 		JLabel forestBackground = new JLabel();
-		ImageIcon forest = new ImageIcon(getClass().getResource("/images/mountain_background.jpg"));
+		ImageIcon forest = new ImageIcon(getClass().getResource("/images/forest_background.jpg"));
 		forestBackground.setIcon(forest);
 
 		JPanel blackPanel = new JPanel();
@@ -104,8 +104,6 @@ public class Forest implements ActionListener {
 	}
 
 	protected void goAroundOption() {
-		fightButton = new JButton("Fight Wolf");
-		runAwayButton = new JButton("Run Away");
 
 		JLabel wolfLabel = new JLabel();
 		ImageIcon wolf = new ImageIcon(getClass().getResource("/images/wolf.png"));
@@ -113,10 +111,12 @@ public class Forest implements ActionListener {
 		wolfLabel.setBounds(550, 250, 101, 113);
 
 		fightButton.setFont(new Font("Calibri Regular", Font.BOLD, 12));
+		fightButton.setFocusable(false);
 		fightButton.setBounds(200, 100, 100, 35);
 		fightButton.addActionListener(this);
 
 		runAwayButton.setFont(new Font("Calibri Regular", Font.BOLD, 12));
+		runAwayButton.setFocusable(false);
 		runAwayButton.addActionListener(this);
 		runAwayButton.setBounds(500, 100, 100, 35);
 
@@ -127,8 +127,6 @@ public class Forest implements ActionListener {
 	}
 
 	protected void crossRiverOption() {
-		berryButton = new JButton("Eat Berries");
-		walkButton = new JButton("Keep Walking");
 
 		JLabel berryLabel = new JLabel();
 		ImageIcon berryBush = new ImageIcon(getClass().getResource("/images/berry_bush.png"));
@@ -136,10 +134,12 @@ public class Forest implements ActionListener {
 		berryLabel.setBounds(450, 290, 100, 60);
 
 		berryButton.setFont(new Font("Calibri Regular", Font.BOLD, 12));
+		berryButton.setFocusable(false);
 		berryButton.setBounds(200, 100, 125, 35);
 		berryButton.addActionListener(this);
 
 		walkButton.setFont(new Font("Calibri Regular", Font.BOLD, 12));
+		walkButton.setFocusable(false);
 		walkButton.addActionListener(this);
 		walkButton.setBounds(500, 100, 125, 35);
 

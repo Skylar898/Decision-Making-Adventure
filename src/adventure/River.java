@@ -13,16 +13,17 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
-public class River implements ActionListener{
+public class River implements ActionListener {
+	private updateStatistics update;
+
 	private Timer timer = new Timer();
 	private TimerTask timerTask;
-	
+
 	private JFrame riverFrame;
-	private JButton goAroundButton;
-	private JButton crossRiverButton;
-	
-	private updateStatistics update;
-	
+
+	private JButton goAroundButton = new JButton("Go Around");
+	private JButton crossRiverButton = new JButton("Cross River");
+
 	public River(updateStatistics update) {
 		this.update = update;
 	}
@@ -31,7 +32,7 @@ public class River implements ActionListener{
 		riverFrame.dispose();
 		update.statistics();
 		update.stageOverview();
-		
+
 		timerTask = new TimerTask() {
 
 			@Override
@@ -53,22 +54,20 @@ public class River implements ActionListener{
 					default:
 						break;
 					}
-					
+
 				} else if (update.updateHealth <= 0 || update.updateComfort <= 0) {
 					End end = new End(update);
 					end.gameOver();
 				}
 			}
 		};
-		
+
 		timer.schedule(timerTask, 2000);
 	}
-	
+
 	protected void riverClass() {
 		riverFrame = new JFrame();
-		goAroundButton = new JButton("Go Around");
-		crossRiverButton = new JButton("Cross River");
-		
+
 		JLabel hikerLabel = new JLabel();
 		ImageIcon hiker = new ImageIcon(getClass().getResource("/images/hiker.png"));
 		hikerLabel.setIcon(hiker);
@@ -77,25 +76,27 @@ public class River implements ActionListener{
 		JLabel riverBackground = new JLabel();
 		ImageIcon river = new ImageIcon(getClass().getResource("/images/river_background.jpg"));
 		riverBackground.setIcon(river);
-		
+
 		goAroundButton.setBounds(200, 100, 100, 35);
-		goAroundButton.setFont(new Font("Calibri Regular",Font.BOLD,12)); 
+		goAroundButton.setFont(new Font("Calibri Regular", Font.BOLD, 12));
+		goAroundButton.setFocusable(false);
 		goAroundButton.addActionListener(this);
-		
+
 		crossRiverButton.setBounds(500, 100, 100, 35);
-		crossRiverButton.setFont(new Font("Calibri Regular",Font.BOLD,12));
+		crossRiverButton.setFont(new Font("Calibri Regular", Font.BOLD, 12));
+		crossRiverButton.setFocusable(false);
 		crossRiverButton.addActionListener(this);
-		
+
 		JPanel blackPanel = new JPanel();
 		blackPanel.setBounds(0, 75, 800, 85);
 		blackPanel.setBackground(Color.black);
-		
+
 		riverFrame.add(hikerLabel);
 		riverFrame.add(goAroundButton);
 		riverFrame.add(crossRiverButton);
 		riverFrame.add(blackPanel);
 		riverFrame.add(riverBackground);
-		
+
 		riverFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		riverFrame.setTitle("River");
 		riverFrame.setVisible(true);
@@ -104,14 +105,13 @@ public class River implements ActionListener{
 		riverFrame.setLocationRelativeTo(null);
 	}
 
-
 	@Override
 	public void actionPerformed(ActionEvent e) {
-		if(e.getSource()==goAroundButton) {
+		if (e.getSource() == goAroundButton) {
 			nextLevel("Around");
 		}
-		
-		else if(e.getSource()==crossRiverButton) {
+
+		else if (e.getSource() == crossRiverButton) {
 			nextLevel("Cross");
 		}
 	}
