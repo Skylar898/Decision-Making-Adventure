@@ -11,21 +11,21 @@ import javax.swing.JLabel;
 
 public class Start implements ActionListener {
 	
-	JFrame startFrame;
-	JButton instructionsButton;
-	JButton startButton;
+	private JFrame startFrame;
+	private JButton instructionsButton;
+	private JButton startButton;
 	
 	
-	JFrame instructionsFrame;
-	JButton backButton;
-	updateStatistics update;
+	private JFrame instructionsFrame;
+	private JButton backButton;
+	private updateStatistics update;
 	
 	public Start(updateStatistics update) {
 		this.update = update;
 	}
 	
 	
-	public void startClass(){
+	protected void startClass(){
 		startFrame = new JFrame();
 		JLabel startBackground = new JLabel();
 		instructionsButton = new JButton("Instructions");
@@ -63,7 +63,7 @@ public class Start implements ActionListener {
 	
 	
 	
-	public void Instructions(String printInstructions) {
+	protected void Instructions(String printInstructions) {
 		JLabel instructionsLabel = new JLabel();
 		backButton = new JButton("Back");
 		instructionsFrame = new JFrame();
@@ -98,7 +98,8 @@ public class Start implements ActionListener {
 		
 		if(e.getSource()==instructionsButton) {
 			startFrame.dispose();
-			Instructions.printInstructions(this);
+			Instructions instructions = new Instructions();
+			instructions.printInstructions(this);
 		}
 		
 			if(e.getSource()==backButton) {

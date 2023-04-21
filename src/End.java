@@ -9,10 +9,10 @@ import javax.swing.JLabel;
 
 public class End implements ActionListener {
 
-	JFrame endFrame = new JFrame();
-	JButton restartButton;
-	JButton exitButton;
-	updateStatistics update;
+	private JFrame endFrame = new JFrame();
+	private JButton restartButton;
+	private JButton exitButton;
+	private updateStatistics update;
 	
 	public End(updateStatistics update) {
 		this.update = update;
@@ -22,7 +22,7 @@ public class End implements ActionListener {
 	
 	
 	
-	public void berryEnd() {
+	protected void berryEnd() {
 		JLabel berryEndLabel = new JLabel();
 		restartButton = new JButton("Restart");
 		exitButton = new JButton("Exit");
@@ -85,7 +85,7 @@ public class End implements ActionListener {
 	
 	
 	
-	public void walkEnd() {
+	protected void walkEnd() {
 		JLabel lostEndLabel = new JLabel();
 		restartButton = new JButton("Restart");
 		exitButton = new JButton("Exit");
@@ -146,7 +146,7 @@ public class End implements ActionListener {
 	
 	
 	
-	public void fightEnd() {
+	protected void fightEnd() {
 		JLabel fightEndLabel = new JLabel();
 		restartButton = new JButton("Restart");
 		exitButton = new JButton("Exit");
@@ -207,7 +207,7 @@ public class End implements ActionListener {
 	
 	
 	
-	public void runEnd() {
+	protected void runEnd() {
 		JLabel lostEndLabel = new JLabel();
 		restartButton = new JButton("Restart");
 		exitButton = new JButton("Exit");
@@ -261,7 +261,7 @@ public class End implements ActionListener {
 	}
 
 	
-	public void gameOver() {
+	protected void gameOver() {
 		update.overviewFrame.dispose();
 		JLabel gameOverLabel = new JLabel();
 		JLabel titleLabel = new JLabel();

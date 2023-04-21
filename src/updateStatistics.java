@@ -7,23 +7,21 @@ import javax.swing.SwingConstants;
 
 public class updateStatistics implements Statistics {
 	
-	JFrame overviewFrame;
-	JLabel overviewLabel;
+	protected JFrame overviewFrame;
+	private JLabel overviewLabel;
 
-	int statUpdate;
-	int updateHealth = Statistics.HEALTH;
-	int updateComfort = Statistics.COMFORT;
+	private int statUpdate;
+	protected int updateHealth = Statistics.HEALTH;
+	protected int updateComfort = Statistics.COMFORT;
 
-	public updateStatistics() {
-
-	}
+	public updateStatistics() {}
 	
 	public updateStatistics(int updateComfort, int updateHealth) {
 		this.updateComfort = updateComfort;
 		this.updateHealth = updateHealth;
 	}
 
-	public void statistics() {
+	protected void statistics() {
 		Random randomNum = new Random();
 		overviewLabel = new JLabel();
 
@@ -92,7 +90,7 @@ public class updateStatistics implements Statistics {
 				
 	}
 	
-	public void stageOverview() {		
+	protected void stageOverview() {		
 		JLabel healthOutput = new JLabel();
 		JLabel comfortOutput = new JLabel();
 		overviewFrame = new JFrame();

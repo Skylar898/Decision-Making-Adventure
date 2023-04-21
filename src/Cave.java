@@ -7,29 +7,29 @@ import javax.swing.JLabel;
 
 public class Cave {
 
-	JFrame caveFrame = new JFrame();
-	Timer timer = new Timer();
-	End end;
+	private JFrame caveFrame = new JFrame();
+	private Timer timer = new Timer();
+	private End end;
 	
-	JLabel airBalloonBackground = new JLabel();
-	ImageIcon balloon = new ImageIcon("cave_exit_background.jpg");
-	
-	
-	JLabel lookoutBackground = new JLabel();
-	ImageIcon lookout = new ImageIcon("cave_exit_lookout_background.jpg");
+	private JLabel airBalloonBackground = new JLabel();
+	private ImageIcon balloon = new ImageIcon("cave_exit_background.jpg");
 	
 	
-	JLabel campfireBackground = new JLabel();
-	ImageIcon campfire = new ImageIcon("cave_campfire_background.jpg");
+	private JLabel lookoutBackground = new JLabel();
+	private ImageIcon lookout = new ImageIcon("cave_exit_lookout_background.jpg");
 	
-	updateStatistics update;
+	
+	private JLabel campfireBackground = new JLabel();
+	private ImageIcon campfire = new ImageIcon("cave_campfire_background.jpg");
+	
+	private updateStatistics update;
 	
 	public Cave(updateStatistics update) {
 		this.update = update;
 	}
 
 
-	public void berryOption() {
+	protected void berryOption() {
 		end = new End(update);
 		airBalloonBackground.setIcon(balloon);
 		
@@ -54,7 +54,7 @@ public class Cave {
 		timer.schedule(timerTask, 2000);
 	}
 	
-	public void walkOption() {
+	protected void walkOption() {
 		end = new End(update);
 		lookoutBackground.setIcon(lookout);
 		
@@ -80,7 +80,7 @@ public class Cave {
 		timer.schedule(timerTask, 2000);
 	}
 	
-	public void fightOption() {
+	protected void fightOption() {
 		end = new End(update);
 		campfireBackground.setIcon(campfire);
 		
@@ -106,7 +106,7 @@ public class Cave {
 		timer.schedule(timerTask, 2000);
 	}
 	
-	public void runOption() {
+	protected void runOption() {
 		end = new End(update);
 		lookoutBackground.setIcon(lookout);
 		

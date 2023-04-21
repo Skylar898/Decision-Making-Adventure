@@ -13,21 +13,21 @@ import javax.swing.JPanel;
 
 public class River implements ActionListener{
 	
-	JFrame riverFrame;
-	JButton goAroundButton;
-	JButton crossRiverButton;
+	private JFrame riverFrame;
+	private JButton goAroundButton;
+	private JButton crossRiverButton;
 	
-	updateStatistics update;
+	private updateStatistics update;
 	
-	JLabel hikerLabel = new JLabel();
-	ImageIcon hiker = new ImageIcon("hiker.png");
+	private JLabel hikerLabel = new JLabel();
+	private ImageIcon hiker = new ImageIcon("hiker.png");
 
 	
 	public River(updateStatistics update) {
 		this.update = update;
 	}
 	
-	public void riverClass() {
+	protected void riverClass() {
 		riverFrame = new JFrame();
 		JLabel riverBackground = new JLabel();
 		goAroundButton = new JButton("Go Around");

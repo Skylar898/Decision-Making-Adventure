@@ -1,6 +1,6 @@
 
 public class Instructions {
-	static void printInstructions(Start window) {
+	protected void printInstructions(Start window) {
 		String printInstructions = 
 		  "<html>Welcome to the Decision Making Adventure, "
 		+ "made by Skylar Phanenhour!<br/><br/>"

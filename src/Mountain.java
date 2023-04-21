@@ -13,18 +13,18 @@ import javax.swing.JPanel;
 
 public class Mountain implements ActionListener {
 	
-	JFrame mountainFrame = new JFrame();
-	JLabel mountainBackground = new JLabel();
-	ImageIcon mountain = new ImageIcon("mountain_background.jpg");
-	JPanel blackPanel = new JPanel();
+	private JFrame mountainFrame = new JFrame();
+	private JLabel mountainBackground = new JLabel();
+	private ImageIcon mountain = new ImageIcon("mountain_background.jpg");
+	private JPanel blackPanel = new JPanel();
 	
-	JLabel hikerLabel = new JLabel();
-	ImageIcon hiker = new ImageIcon("hiker.png");
+	private JLabel hikerLabel = new JLabel();
+	private ImageIcon hiker = new ImageIcon("hiker.png");
 	
-	JButton berryCaveButton;
-	JButton walkCaveButton;
-	JButton fightCaveButton;
-	JButton runCaveButton;
+	private JButton berryCaveButton;
+	private JButton walkCaveButton;
+	private JButton fightCaveButton;
+	private JButton runCaveButton;
 	
 	updateStatistics update;
 	
@@ -32,7 +32,7 @@ public class Mountain implements ActionListener {
 		this.update = update;
 	}
 	
-	public void berryOption() {
+	protected void berryOption() {
 		berryCaveButton = new JButton("Enter Cave");
 		
 		
@@ -62,7 +62,7 @@ public class Mountain implements ActionListener {
 		mountainFrame.setLocationRelativeTo(null);
 	}
 	
-	public void walkOption() {
+	protected void walkOption() {
 		walkCaveButton = new JButton("Enter Cave");
 		
 		hikerLabel.setIcon(hiker);
@@ -90,7 +90,7 @@ public class Mountain implements ActionListener {
 		mountainFrame.setLocationRelativeTo(null);
 	}
 	
-	public void fightOption() {		
+	protected void fightOption() {		
 		fightCaveButton = new JButton("Enter Cave");
 		
 		hikerLabel.setIcon(hiker);
@@ -118,7 +118,7 @@ public class Mountain implements ActionListener {
 		mountainFrame.setLocationRelativeTo(null);
 	}
 	
-	public void runOption() {
+	protected void runOption() {
 		runCaveButton = new JButton("Enter Cave");
 		
 		hikerLabel.setIcon(hiker);

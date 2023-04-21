@@ -12,21 +12,21 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 
 public class Forest implements ActionListener{
-	JPanel blackPanel = new JPanel();
-	JFrame forestFrame = new JFrame();
-	JLabel forestBackground = new JLabel();
-	ImageIcon forest = new ImageIcon("forest_background.jpg");
+	private JPanel blackPanel = new JPanel();
+	private JFrame forestFrame = new JFrame();
+	private JLabel forestBackground = new JLabel();
+	private ImageIcon forest = new ImageIcon("forest_background.jpg");
 	
-	JLabel hikerLabel = new JLabel();
-	ImageIcon hiker = new ImageIcon("hiker.png");
+	private JLabel hikerLabel = new JLabel();
+	private ImageIcon hiker = new ImageIcon("hiker.png");
 	
 	//Go around option
-	JButton fightButton;
-	JButton runAwayButton;
+	private JButton fightButton;
+	private JButton runAwayButton;
 	
 	//Cross river option
-	JButton berryButton;
-	JButton walkButton;
+	private JButton berryButton;
+	private JButton walkButton;
 	
 	updateStatistics update;
 	
@@ -34,7 +34,7 @@ public class Forest implements ActionListener{
 		this.update = update;
 	}
 	
-	public void goAroundOption() {
+	protected void goAroundOption() {
 		fightButton = new JButton("Fight Wolf");
 		runAwayButton = new JButton("Run Away");
 		
@@ -79,7 +79,7 @@ public class Forest implements ActionListener{
 	}
 	
 
-	public void crossRiverOption() {
+	protected void crossRiverOption() {
 		berryButton = new JButton("Eat Berries");
 		walkButton = new JButton("Keep Walking");
 		JLabel berryLabel = new JLabel();
