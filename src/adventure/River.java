@@ -78,12 +78,10 @@ public class River implements ActionListener{
 		ImageIcon river = new ImageIcon(getClass().getResource("/images/river_background.jpg"));
 		riverBackground.setIcon(river);
 		
-		goAroundButton.setFocusable(false);
 		goAroundButton.setBounds(200, 100, 100, 35);
 		goAroundButton.setFont(new Font("Calibri Regular",Font.BOLD,12)); 
 		goAroundButton.addActionListener(this);
 		
-		crossRiverButton.setFocusable(false);
 		crossRiverButton.setBounds(500, 100, 100, 35);
 		crossRiverButton.setFont(new Font("Calibri Regular",Font.BOLD,12));
 		crossRiverButton.addActionListener(this);
@@ -97,6 +95,7 @@ public class River implements ActionListener{
 		riverFrame.add(crossRiverButton);
 		riverFrame.add(blackPanel);
 		riverFrame.add(riverBackground);
+		
 		riverFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		riverFrame.setTitle("River");
 		riverFrame.setVisible(true);

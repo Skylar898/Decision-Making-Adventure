@@ -26,7 +26,6 @@ public class Mountain implements ActionListener {
 	private JButton fightCaveButton;
 	private JButton runCaveButton;
 
-
 	public Mountain(updateStatistics update) {
 		this.update = update;
 	}
@@ -36,19 +35,19 @@ public class Mountain implements ActionListener {
 		ImageIcon hiker = new ImageIcon(getClass().getResource("/images/hiker.png"));
 		hikerLabel.setIcon(hiker);
 		hikerLabel.setBounds(475, 80, 119, 200);
-		
+
 		JLabel mountainBackground = new JLabel();
 		ImageIcon mountain = new ImageIcon(getClass().getResource("/images/mountain_background.jpg"));
 		mountainBackground.setIcon(mountain);
-		
+
 		JPanel blackPanel = new JPanel();
 		blackPanel.setBounds(0, 25, 500, 85);
 		blackPanel.setBackground(Color.black);
-		
+
 		mountainFrame.add(hikerLabel);
 		mountainFrame.add(blackPanel);
 		mountainFrame.add(mountainBackground);
-		
+
 		mountainFrame.setTitle("Mountain");
 		mountainFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		mountainFrame.setResizable(false);
@@ -61,7 +60,7 @@ public class Mountain implements ActionListener {
 		mountainFrame.dispose();
 		update.statistics();
 		update.stageOverview();
-		
+
 		timerTask = new TimerTask() {
 
 			@Override
@@ -93,7 +92,7 @@ public class Mountain implements ActionListener {
 					default:
 						break;
 					}
-					
+
 				} else if (update.updateHealth <= 0 || update.updateComfort <= 0) {
 					End end = new End(update);
 					end.gameOver();
@@ -160,15 +159,15 @@ public class Mountain implements ActionListener {
 			nextLevel("Fight");
 		}
 
-		if (e.getSource() == runCaveButton) {
+		else if (e.getSource() == runCaveButton) {
 			nextLevel("Run");
 		}
 
-		if (e.getSource() == berryCaveButton) {
+		else if (e.getSource() == berryCaveButton) {
 			nextLevel("Berry");
 		}
 
-		if (e.getSource() == walkCaveButton) {
+		else if (e.getSource() == walkCaveButton) {
 			nextLevel("Walk");
 		}
 

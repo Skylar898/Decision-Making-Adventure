@@ -44,13 +44,14 @@ public class Start implements ActionListener {
 		startFrame.add(startButton);
 		startFrame.add(instructionsButton);
 		startFrame.add(startBackground);
+		
 		startFrame.setTitle("Decision Making Adventure");
 		startFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		startFrame.setResizable(false);
 		startFrame.setSize(830, 375);
 		startFrame.setVisible(true);
 		startFrame.setLocationRelativeTo(null);
-		startFrame.getContentPane().setBackground(Color.white);
+		startFrame.setBackground(Color.white);
 
 	}
 
@@ -71,10 +72,9 @@ public class Start implements ActionListener {
 		instructionsFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		instructionsFrame.setResizable(false);
 		instructionsFrame.setSize(560, 500);
-		instructionsFrame.setLayout(null);
 		instructionsFrame.setVisible(true);
 		instructionsFrame.setLocationRelativeTo(null);
-		instructionsFrame.getContentPane().setBackground(Color.white);
+		instructionsFrame.setBackground(Color.white);
 
 		instructionsFrame.add(instructionsLabel);
 		instructionsFrame.add(backButton);
