@@ -1,0 +1,7 @@
+.settings
+.classpath
+.project
+adventure-javac.err
+adventure-javac.out
+bin/adventure-jar.err
+bin/adventure-jar.out
