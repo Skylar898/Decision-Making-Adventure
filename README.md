@@ -8,9 +8,10 @@ The **_Decision Making Adventure_** is a personal project of mine that I have ma
 Various techniques used include implementing JLibrary components, using Interfaces, Action Event Listeners, Timers, and TimerTasks.
 
 ## How can this game be played?
-> When you start the game, you will be given some statistics for your character: Health: 10 and Comfort: 10.
-> You will be given various different decisions as you progress through the game that may alter your future outcomes!
-> As the stages progress, the character's statistics will decrease after each stage by a random amount, or based on the decisions that you make.
-> The goal is to get through all of the stages successfully without your statistics reaching 0.
+When you start the game, you will be given some statistics for your character: Health: 10 and Comfort: 10.
+You will be given various different decisions as you progress through the game that may alter your future outcomes!
+As the stages progress, the character's statistics will decrease after each stage by a random amount, or based on the decisions that you make.
+The goal is to get through all of the stages successfully without your statistics reaching 0.
 
-
+> _Note:_
+> This game can be ran from either **run_game.bat** script or the **Adventure.jar** executable file in the ./bin folder for ease of use.   
